@@ -1,0 +1,273 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Agents by everyone</title>
+
+
+
+    <style>
+
+        body {
+
+            font-family: Arial, sans-serif;
+
+            display: flex;
+
+            flex-direction: column;
+
+            align-items: center;
+
+            margin: 0;
+
+            overflow: hidden; /* Hide overflow to prevent scrollbar due to video */
+
+        }
+
+
+
+        video {
+
+            position: fixed;
+
+            top: 50%;
+
+            left: 50%;
+
+            min-width: 100%;
+
+            min-height: 100%;
+
+            width: auto;
+
+            height: auto;
+
+            transform: translateX(-50%) translateY(-50%);
+
+            z-index: -1; /* Set z-index to send video to the background */
+
+        }
+
+
+
+        .neonText {
+
+            text-shadow:
+
+                0 0 7px #fff,
+
+                0 0 10px #fff,
+
+                0 0 21px #fff,
+
+                0 0 42px #bc1,
+
+                0 0 82px #bc1,
+
+                0 0 92px #bc1,
+
+                0 0 102px #bc1,
+
+                0 0 151px #bc1;
+
+        }
+
+
+
+        h1 {
+
+            text-align: center;
+
+            font-family: 'GothTitan', sans-serif;
+
+            font-size: 50px;
+
+            padding-top: 30px;
+
+            opacity: 0;
+
+            color: #045;
+
+            animation: fadeIn 2s forwards; /* 2s duration, forwards to keep the final state */
+
+        }
+
+
+
+        @keyframes fadeIn {
+
+            from {
+
+                opacity: 0;
+
+            }
+
+            to {
+
+                opacity: 1;
+
+            }
+
+        }
+
+
+
+        .button-container {
+
+            display: flex;
+
+            flex-direction: column;
+
+            gap: 10px;
+
+            margin-top: 20px;
+
+            opacity: 0;
+
+            animation: fadeIn 2s forwards; /* 2s duration, forwards to keep the final state */
+
+        }
+
+
+
+        .whatsapp-button, .telegram-button {
+
+            padding: 10px;
+
+            font-size: 16px;
+
+            text-align: center;
+
+            text-decoration: none;
+
+            color: #fff;
+
+            cursor: pointer;
+
+            border: none;
+
+            border-radius: 5px;
+
+            width: 250px;
+
+        }
+
+
+
+        .whatsapp-button {
+
+            background-color: #25D366; /* WhatsApp color */
+
+        }
+
+
+
+        .telegram-button {
+
+            background-color: #0088cc; /* Telegram color */
+
+        }
+
+
+
+        .fab {
+
+            font-size: 30px;
+
+            padding-right: 15px;
+
+        }
+
+    </style>
+
+
+
+    <script>
+
+        document.addEventListener('DOMContentLoaded', function () {
+
+            var urlParams = new URLSearchParams(window.location.search);
+
+            var telegramUsername = urlParams.toString() || '';
+
+
+
+            if (telegramUsername) {
+
+                // Exclude encoding for the equal sign (=)
+
+                var $Whatsapp = 'https://agents.infotecharmy.xyz/5DJ3GJCXTFJXXJJFFXJH53DYJDOH1'; // Adjust WhatsApp link as needed
+
+                var $telegram = 'https://t.me/' + encodeURIComponent(telegramUsername.replace(/=/g, ''));
+
+
+
+                // Replace the placeholder href values with actual URLs
+
+                document.getElementById('whatsappButton').href = $Whatsapp;
+
+                document.getElementById('telegramButton').href = $telegram;
+
+            }
+
+        });
+
+    </script>
+
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+
+    <!-- Meta Icon -->
+
+    <link expr:href='data:blog.homepageUrl + "/favicon.ico"' rel='icon' type='image/x-icon'/>
+
+    <link href='https://iili.io/JAFG3rX.md.png' rel='apple-touch-icon'/>
+
+    <!-- Add other apple-touch-icon links -->
+
+</head>
+
+<body>
+
+    <video autoplay muted loop>
+
+        <source src="https://agents.infotecharmy.xyz/1.mp4" type="video/mp4">
+
+        Your browser does not support the video tag.
+
+    </video>
+
+    <h1 class="neonText">Agents</h1>
+
+    <div class="button-container">
+
+        <a href="" class="whatsapp-button" id="whatsappButton">
+
+            <i class="fab fa-whatsapp" style="vertical-align: middle;"></i> WhatsApp
+
+        </a>
+
+
+
+        <a href="" class="telegram-button" id="telegramButton">
+
+            <i class="fab fa-telegram-plane" style="vertical-align: middle;"></i> Telegram
+
+        </a>
+
+    </div>
+
+</body>
+
+</html>
+
